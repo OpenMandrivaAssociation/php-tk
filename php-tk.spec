@@ -7,7 +7,7 @@
 Summary:	Provides TK functions for PHP
 Name:		php-%{modname}
 Version:	0.1.1
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-tk.sourceforge.net/
@@ -30,15 +30,7 @@ greatly simplifies writing client-side cross-platform GUI applications.
 %patch0 -p0
 
 %build
-export CFLAGS="%{optflags}"
-export CXXFLAGS="%{optflags}"
-export FFLAGS="%{optflags}"
-
-%if %mdkversion >= 200710
-export CFLAGS="$CFLAGS -fstack-protector"
-export CXXFLAGS="$CXXFLAGS -fstack-protector"
-export FFLAGS="$FFLAGS -fstack-protector"
-%endif
+%serverbuild
 
 # source tk stuff
 . %{_libdir}/tkConfig.sh
