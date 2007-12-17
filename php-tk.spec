@@ -17,7 +17,6 @@ Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	tk tk-devel
 BuildRequires:  X11-devel
-BuildRoot:	%{_tmppath}/%{name}-root
 
 %description
 PHP/TK is an native extension for the PHP programming language that implements
