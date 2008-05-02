@@ -7,7 +7,7 @@
 Summary:	Provides TK functions for PHP
 Name:		php-%{modname}
 Version:	0.1.1
-Release:	%mkrel 10
+Release:	%mkrel 11
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-tk.sourceforge.net/
@@ -17,7 +17,7 @@ Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	tk tk-devel
 BuildRequires:  X11-devel
-BuildRoot:	%{_tmppath}/%{name}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 PHP/TK is an native extension for the PHP programming language that implements
