@@ -7,12 +7,13 @@
 Summary:	Provides TK functions for PHP
 Name:		php-%{modname}
 Version:	0.1.1
-Release:	%mkrel 13
+Release:	%mkrel 14
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-tk.sourceforge.net/
 Source0:	tk-%{version}.tar.bz2
 Patch0:		tk-0.1.1-lib64.diff
+Patch1:		tk-0.1.1-format_not_a_string_literal_and_no_format_arguments.diff
 Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	tk tk-devel
@@ -28,6 +29,7 @@ greatly simplifies writing client-side cross-platform GUI applications.
 
 %setup -q -n tk-%{version}
 %patch0 -p0
+%patch1 -p0
 
 %build
 %serverbuild
