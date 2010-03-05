@@ -7,7 +7,7 @@
 Summary:	Provides TK functions for PHP
 Name:		php-%{modname}
 Version:	0.1.1
-Release:	%mkrel 21
+Release:	%mkrel 22
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-tk.sourceforge.net/
