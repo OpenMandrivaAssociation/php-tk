@@ -7,7 +7,7 @@
 Summary:	Provides TK functions for PHP
 Name:		php-%{modname}
 Version:	0.1.1
-Release:	%mkrel 26
+Release:	%mkrel 27
 Group:		Development/PHP
 License:	PHP License
 URL:		http://php-tk.sourceforge.net/
@@ -17,7 +17,6 @@ Patch1:		tk-0.1.1-format_not_a_string_literal_and_no_format_arguments.diff
 Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	tk tk-devel
-BuildRequires:  X11-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -33,21 +32,11 @@ greatly simplifies writing client-side cross-platform GUI applications.
 
 %build
 %serverbuild
+phpize
+%configure2_5x
+%make
 
-# source tk stuff
-. %{_libdir}/tkConfig.sh
-
-%{_usrsrc}/php-devel/buildext tk "tk.c" \
-    "${TK_XLIBSW} ${TK_LIB_SPEC} " "-DCOMPILE_DL_TK \
-    -I${TK_SRC_DIR} ${TK_XINCLUDES}"
-
-#phpize
-#export LIBS="$LIBS -ltk"
-#%%configure2_5x \
-#    --with-%{modname}=shared,%{_prefix}
-#
-#%%make
-#mv modules/*.so .
+mv modules/*.so .
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
