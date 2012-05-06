@@ -14,6 +14,7 @@ URL:		http://php-tk.sourceforge.net/
 Source0:	tk-%{version}.tar.bz2
 Patch0:		tk-0.1.1-lib64.diff
 Patch1:		tk-0.1.1-format_not_a_string_literal_and_no_format_arguments.diff
+Patch2:		tk-0.1.1-php54x.diff
 Requires:	php-cli >= 3:5.2.0
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	tk tk-devel
@@ -29,6 +30,7 @@ greatly simplifies writing client-side cross-platform GUI applications.
 %setup -q -n tk-%{version}
 %patch0 -p0
 %patch1 -p0
+%patch2 -p0
 
 %build
 %serverbuild
