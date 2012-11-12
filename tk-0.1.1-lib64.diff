@@ -1,0 +1,17 @@
+--- config.m4	2004-11-12 21:02:37.000000000 +0100
++++ config.m4.oden	2005-01-08 11:26:15.566647807 +0100
+@@ -34,12 +34,12 @@
+ 
+ dnl PHP_CHECK_LIBRARY($LIBNAME,$LIBSYMBOL,
+ dnl [
+-dnl   PHP_ADD_LIBRARY_WITH_PATH($LIBNAME, $TK_DIR/lib, TK_SHARED_LIBADD)
++dnl   PHP_ADD_LIBRARY_WITH_PATH($LIBNAME, $TK_DIR/$PHP_LIBNAME, TK_SHARED_LIBADD)
+ dnl   AC_DEFINE(HAVE_PTHREAD_LIB,1,[ ])
+ dnl ],[
+ dnl   AC_MSG_ERROR([wrong pthread lib version or lib not found])
+ dnl ],[
+-dnl   -L$TK_DIR/lib
++dnl   -L$TK_DIR/$PHP_LIBNAME
+ dnl ])
+ 
+ dnl PHP_SUBST(TK_SHARED_LIBADD)

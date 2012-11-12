@@ -1,0 +1,19 @@
+--- tk.c	2004-11-14 19:07:32.000000000 +0100
++++ tk.c.oden	2009-01-04 15:14:35.000000000 +0100
+@@ -733,14 +733,14 @@ static void php_tk_terminal(zval *return
+ 			 * On arrête l'execution en affichant une erreur fatale.
+ 			 */
+ 			case RETURN_WIDGET:
+-				zend_error(E_ERROR, tk_return_value); 
++				zend_error(E_ERROR, "%s", tk_return_value); 
+ 			break;
+ 			
+ 			/* Autre, on affiche un avertissement
+ 			 * et on retourne une valeur de type booléen négatif, la commande a échoué.
+ 			 */
+ 			default:
+-				zend_error(E_WARNING, tk_return_value);
++				zend_error(E_WARNING, "%s", tk_return_value);
+ 				
+ 				return_value->type = IS_BOOL;
+ 				return_value->value.lval = 0;

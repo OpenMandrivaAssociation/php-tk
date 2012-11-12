@@ -1,0 +1,47 @@
+--- tk.c	2012-05-06 09:57:31.048011322 +0200
++++ tk.c.oden	2012-05-06 09:57:19.971938329 +0200
+@@ -141,7 +141,7 @@ zend_function_entry tk_functions[] =
+ 	{NULL, NULL, NULL}
+ };
+ 
+-function_entry bitmap_functions[] = {
++zend_function_entry bitmap_functions[] = {
+ 	PHP_FALIAS(bitmap, za_bitmap, NULL)
+ 	PHP_FALIAS(delete, im_delete, NULL)
+ 	PHP_FALIAS(height, im_height, NULL)
+@@ -153,7 +153,7 @@ function_entry bitmap_functions[] = {
+ 	{NULL, NULL, NULL}
+ };
+ 
+-function_entry photo_functions[] = {
++zend_function_entry photo_functions[] = {
+ 	PHP_FALIAS(photo, za_photo, NULL)
+ 	PHP_FALIAS(delete, im_delete, NULL)
+ 	PHP_FALIAS(height, im_height, NULL)
+@@ -175,7 +175,7 @@ function_entry photo_functions[] = {
+ 	{NULL, NULL, NULL}
+ };
+ 
+-function_entry font_functions[] = {
++zend_function_entry font_functions[] = {
+ 	PHP_FALIAS(font, za_font, NULL)
+ 	PHP_FALIAS(actual, ft_actual, NULL)
+ 	PHP_FALIAS(configure, ft_configure, NULL)
+@@ -185,7 +185,7 @@ function_entry font_functions[] = {
+ 	{NULL, NULL, NULL}
+ };
+ 
+-function_entry scale_functions[] = {
++zend_function_entry scale_functions[] = {
+ 	PHP_FALIAS(scale, sc_scale, NULL)
+ 	PHP_FALIAS(cget, za_cget, NULL)
+ 	PHP_FALIAS(configure, za_configure, NULL)
+@@ -196,7 +196,7 @@ function_entry scale_functions[] = {
+ 	{NULL, NULL, NULL}
+ };
+ 
+-function_entry oO_functions[] = {
++zend_function_entry oO_functions[] = {
+ 	PHP_FALIAS(tk, za_tk, NULL)
+ 	PHP_FALIAS(getid, za_getid, NULL)
+ 	
