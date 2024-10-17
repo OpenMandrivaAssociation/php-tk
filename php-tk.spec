@@ -10,7 +10,7 @@ Version:	0.1.1
 Release:	33
 Group:		Development/PHP
 License:	PHP License
-URL:		http://php-tk.sourceforge.net/
+URL:		https://php-tk.sourceforge.net/
 Source0:	tk-%{version}.tar.bz2
 Patch0:		tk-0.1.1-lib64.diff
 Patch1:		tk-0.1.1-format_not_a_string_literal_and_no_format_arguments.diff
